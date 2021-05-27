@@ -72,9 +72,10 @@ function draw() {
 
 
 function mousePressed() {
-  console.log('HERE');
-  let x = map(mouseX, 0, width, -1, 1);
-  let y = map(mouseY, 0, height, 1, -1);
-  xs.push(x);
-  ys.push(y);
+  if(mouseX < width && mouseY < height && mouseX > 0 && mouseY > 0){ 
+    let x = map(mouseX, 0, width, -1, 1);
+    let y = map(mouseY, 0, height, 1, -1);
+    xs.push(x);
+    ys.push(y);
+  }
 }
